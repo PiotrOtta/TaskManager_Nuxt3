@@ -22,9 +22,17 @@ App's backend has static delays to allow frontend loading capabilities.
 
 ### App showcase
 
-#### Add and edit tasks
+#### Add tasks
 
-<img src="assets/other/addEditTask.gif" style="border-radius: 1rem;" alt="TaskManager showcase - add and edit" title="TaskManager - add and edit"/>
+<img src="assets/other/addTask.gif" style="border-radius: 1rem;" alt="TaskManager showcase - add and edit" title="TaskManager - add and edit"/>
+
+#### Edit tasks
+
+<img src="assets/other/editTask.gif" style="border-radius: 1rem;" alt="TaskManager showcase - add and edit" title="TaskManager - add and edit"/>
+
+#### Delete tasks
+
+<img src="assets/other/taskDeletion.gif" style="border-radius: 1rem;" alt="TaskManager showcase - add and edit" title="TaskManager - add and edit"/>
 
 #### Sort and filter tasks
 
