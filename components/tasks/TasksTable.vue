@@ -3,7 +3,11 @@
         name="taskList"
         tag="div"
         class="w-full flex flex-wrap items-center w-full"
-        :class="sortingDirection === 'UP' ? 'flex-col-reverse' : 'flex-col'">
+        :class="
+            isSortingActive && sortingDirection === 'UP'
+                ? 'flex-col-reverse'
+                : 'flex-col'
+        ">
         <div v-for="task in tasksList" :key="task.id" class="mb-4 w-full">
             <TaskCard :task="task" />
         </div>

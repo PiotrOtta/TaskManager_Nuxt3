@@ -71,3 +71,4 @@ logs
 /backend*.pid.lock
 # Diagnostic reports (https://nodejs.org/api/report.html)
 /backendreport.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+.eslintcache
