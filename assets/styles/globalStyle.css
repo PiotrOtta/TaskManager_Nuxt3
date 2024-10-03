@@ -1,0 +1,103 @@
+html.dark {
+    background: #222;
+    color: white;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(
+        2137deg,
+        rgb(225, 240, 255) 4%,
+        rgb(122, 176, 230) 40%,
+        rgb(190, 235, 253) 70%,
+        rgb(122, 176, 230) 96%
+    );
+    animation: gradient 60s ease infinite;
+    background-attachment: fixed;
+    background-size: 400% 400%;
+}
+
+.dark body {
+    background: linear-gradient(
+        2137deg,
+        rgb(15, 39, 63) 4%,
+        rgb(0, 16, 32) 40%,
+        rgb(0, 67, 94) 70%,
+        rgb(3, 31, 59) 96%
+    );
+    animation: gradient 60s ease infinite;
+    background-attachment: fixed;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.el-button i,
+.el-switch__core i {
+    font-size: 1rem !important;
+}
+
+.nuxt-icon {
+    margin-bottom: 0 !important;
+}
+
+.el-container {
+    flex-direction: column !important;
+}
+
+.el-card__body {
+    transition: ease-in-out 140ms;
+    padding-bottom: 0.4rem !important;
+}
+.el-card__footer {
+    overflow: hidden;
+    padding: 0 !important;
+    transition: ease-in-out 200ms;
+    opacity: 0;
+}
+.isHovered .el-card__footer {
+    height: auto !important;
+    padding: calc(var(--el-card-padding) - 12px) var(--el-card-padding) !important;
+    opacity: 100;
+}
+.isHovered .el-card__body {
+    padding-bottom: 1rem !important;
+}
+
+.el-page-header__back {
+    display: none !important;
+}
+
+.idLabel {
+    position: absolute;
+    right: 0.7rem;
+    top: 0;
+    font-size: 2rem;
+    color: lightgrey;
+}
+
+.dark .idLabel {
+    color: rgb(85, 85, 85);
+}
+
+.toolbar-enter-active,
+.toolbar-leave-active {
+    transition: all 0.5s ease;
+}
+.toolbar-enter-from,
+.toolbar-leave-to {
+    opacity: 0;
+    transform: translateX(30px);
+}
