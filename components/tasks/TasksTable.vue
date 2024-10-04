@@ -43,6 +43,16 @@ const tasksList = computed(() => {
     function getTime(date: Date) {
         return new Date(date).getTime();
     }
+    
+    // filtering
+    if (isFilteringActive.value && filterBy.value?.length) {
+        _tasks = _tasks.filter(
+            (task) =>
+                // eslint-disable-next-line @stylistic/operator-linebreak
+                (task.status && filterBy.value.includes(task.status)) ||
+                (task.priority && filterBy.value.includes(task.priority)),
+        );
+    }
 
     // sorting
     if (isSortingActive.value) {
@@ -58,15 +68,6 @@ const tasksList = computed(() => {
         }
     }
 
-    // filtering
-    if (isFilteringActive.value && filterBy.value?.length) {
-        _tasks = _tasks.filter(
-            (task) =>
-                // eslint-disable-next-line @stylistic/operator-linebreak
-                (task.status && filterBy.value.includes(task.status)) ||
-                (task.priority && filterBy.value.includes(task.priority)),
-        );
-    }
 
     return _tasks;
 });
