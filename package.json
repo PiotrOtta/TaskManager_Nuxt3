@@ -3,10 +3,12 @@
     "type": "module",
     "private": true,
     "scripts": {
-        "install:all": "npm install && cd backend && npm install && cd..",
+        "install:backend": "cd backend && npm install && cd..",
+        "install:all": "concurrently --kill-others \"npm install\" \"npm run install:backend\"",
         "build": "nuxt build",
         "dev": "nuxt dev",
-        "dev:all": "nuxt dev && cd backend && npm run dev",
+        "dev:backend": "cd backend & npm run dev",
+        "dev:all": "concurrently --kill-others \"npm run dev\" \"npm run dev:backend\"",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
@@ -27,6 +29,7 @@
     },
     "devDependencies": {
         "@element-plus/nuxt": "^1.0.10",
+        "concurrently": "^9.0.1",
         "eslint": "^8.57.1",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-format": "^0.1.2",

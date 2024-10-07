@@ -43,15 +43,28 @@ const tasksList = computed(() => {
     function getTime(date: Date) {
         return new Date(date).getTime();
     }
-    
+
     // filtering
     if (isFilteringActive.value && filterBy.value?.length) {
-        _tasks = _tasks.filter(
-            (task) =>
-                // eslint-disable-next-line @stylistic/operator-linebreak
-                (task.status && filterBy.value.includes(task.status)) ||
-                (task.priority && filterBy.value.includes(task.priority)),
-        );
+        _tasks = _tasks.filter((task) => {
+            if (filterBy.value.length <= 1) {
+                return (
+                    // eslint-disable-next-line @stylistic/operator-linebreak
+                    (task.status && filterBy.value.includes(task.status)) ||
+                    (task.priority && filterBy.value.includes(task.priority))
+                );
+            } else {
+                return (
+                    // eslint-disable-next-line @stylistic/operator-linebreak
+                    task.status &&
+                    // eslint-disable-next-line @stylistic/operator-linebreak
+                    filterBy.value.includes(task.status) &&
+                    // eslint-disable-next-line @stylistic/operator-linebreak
+                    task.priority &&
+                    filterBy.value.includes(task.priority)
+                );
+            }
+        });
     }
 
     // sorting
@@ -67,7 +80,6 @@ const tasksList = computed(() => {
             );
         }
     }
-
 
     return _tasks;
 });
