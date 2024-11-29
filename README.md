@@ -69,7 +69,7 @@ App's backend has static delays to allow frontend loading capabilities.
 Install the dependencies for both frontend and backend:
 
 ```bash
-npm install && cd backend && npm install && cd..
+npm install && cd backend && npm install && cd ..
 ```
 
 ## Then run the app
