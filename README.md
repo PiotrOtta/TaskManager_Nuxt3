@@ -52,21 +52,21 @@ App's backend has static delays to allow frontend loading capabilities.
 
 ### Used technologies
 
--   Node v20.17.0
+-   Node 20.17.0
 
 -   npm 10.8.2
 
--   **Programming editor**: VScode
+-   Nuxt 3.13.0
+
+-   Vue 3.5.10
+
+-   Pinia 2.2.4
+
+-   TypeScript 5.6.2
 
 ## Setup
 
 Install the dependencies for both frontend and backend:
-
-```bash
-npm run install:all
-```
-
-or just just npm install in root folder and in backend folder:
 
 ```bash
 npm install && cd backend && npm install && cd..
