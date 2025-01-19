@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
-        baseURL: 'https://piotrotta.github.io/TaskManager_Nuxt3/',
+        baseURL: '.',
         head: {
             title: 'Task Manager by Piotr Otta',
             meta: [
@@ -41,6 +41,13 @@ export default defineNuxtConfig({
         'nuxt-svgo',
         '@pinia/nuxt',
     ],
+    nitro: {
+        baseURL: '.',
+        prerender: {
+            crawlLinks: true,
+            failOnError: false,
+        },
+    },
     eslint: {
         checker: true,
         config: {
