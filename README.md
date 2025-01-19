@@ -1,5 +1,8 @@
 <h1 align="center">TaskManager app</h1>
-<h2 align="center">by Piotr Otta</h2>
+
+<p align="center">
+   <img src="assets/other/taskManager_box.png" alt="Task manager software box picture" title="Task manager App by Piotr Otta" height="320" />
+</p>
 
 ![Latest Version](https://img.shields.io/badge/latest-1.0.0-yellow)
 

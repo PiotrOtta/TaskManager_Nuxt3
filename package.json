@@ -1,18 +1,23 @@
 {
-    "name": "nuxt-app",
+    "name": "taskmanager-app",
     "type": "module",
+    "author": "Piotr Otta",
+    "homepage": ".",
     "private": true,
     "scripts": {
         "install:backend": "cd backend && npm install && cd..",
         "install:all": "concurrently --kill-others \"npm install\" \"npm run install:backend\"",
         "build": "nuxt build",
+        "build:gh-pages": "nuxt build --preset github_pages",
         "dev": "nuxt dev",
         "dev:backend": "cd backend & npm run dev",
         "dev:all": "concurrently --kill-others \"npm run dev\" \"npm run dev:backend\"",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "lint": "eslint ."
+        "lint": "eslint .",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@nuxt/eslint": "^0.5.7",
@@ -33,6 +38,7 @@
         "eslint": "^8.57.1",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-format": "^0.1.2",
+        "gh-pages": "^6.3.0",
         "prettier": "^3.3.3",
         "vite-plugin-eslint2": "^4.4.2"
     },

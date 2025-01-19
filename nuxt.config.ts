@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     app: {
+        baseURL: '/https://piotrotta.github.io/TaskManager_Nuxt3/',
         head: {
             title: 'Task Manager by Piotr Otta',
             meta: [
