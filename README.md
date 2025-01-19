@@ -23,6 +23,8 @@ Additionaly, app features dark and light themes.
 
 App's backend has static delays to allow frontend loading capabilities.
 
+You can check this app on https://piotrotta.github.io/TaskManager_Nuxt3/
+
 ### App showcase
 
 #### Add tasks
