@@ -16,8 +16,8 @@
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
         "lint": "eslint .",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "predeploy": "npm run build:gh-pages",
+        "deploy": "gh-pages -d .output"
     },
     "dependencies": {
         "@nuxt/eslint": "^0.5.7",
