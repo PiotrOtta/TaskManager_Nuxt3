@@ -1,4 +1,10 @@
-<h1 align="center">TaskManager app</h1>
+<div id="user-content-toc">
+  <ul align="center" style="list-style: none;">
+    <summary>
+      <h1>TaskManager app</h1>
+    </summary>
+  </ul>
+</div>
 
 <p align="center">
    <img src="assets/other/taskManager_box.png" alt="Task manager software box picture" title="Task manager App by Piotr Otta" height="320" />
